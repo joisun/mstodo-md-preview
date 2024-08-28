@@ -13,6 +13,8 @@ export default defineConfig({
         description: 'Microsoft To-Do Markdown Preview Support',
         icon: 'https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://to-do.live.com/&size=64',
         match: ['https://to-do.live.com/*'],
+        license: 'MIT',
+        version: '0.0.0',
       },
       build: {
         externalGlobals: {
