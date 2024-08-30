@@ -6,3 +6,8 @@
 https://greasyfork.org/zh-CN/scripts/505577-microsoft-to-do-markdown-preview-support-mstodo-md-preview
 
 
+
+**Note:**
+
+`em` used as highlight, so if you want use italic style text, you can use  the custom tag `i`.
+
