@@ -167,7 +167,8 @@ function observe() {
 function clickListen() {
   document.addEventListener("click", function (e) {
     const target = e.target as HTMLButtonElement;
-    if (target.className === "taskItem-titleWrapper") {
+    const parent = document.querySelector('.tasks') || document.querySelector('.grid-body')
+    if (target.className === "taskItem-titleWrapper" || parent?.contains(target)) {
       console.log("mstodo: click listener triggered")
       observerHandler();
     }
