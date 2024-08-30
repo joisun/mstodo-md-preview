@@ -129,8 +129,8 @@ const observerHandler = behindDebounce(function () {
   const mdContent = qlEditor.innerText;
   try {
     console.log("mstodo:parsing....");
-    //fix:首次渲染有些空格为不间断空格，导致渲染失败 将所有不间断空格 (\u00A0) 替换为普通空格 (\u0020)
-    let result = md.render(mdContent.replace(/\u00A0/g, ' '));
+    //fix:首次渲染有些空格为不间断空格，导致渲染失败 将所有不间断空格 (\u00A0) 替换为普通空格 (\u0020), 替换为两个空格，否则 li > p 将渲染异常
+    let result = md.render(mdContent.replace(/\u00A0/g, '  '));
     mdViewer.innerHTML = result;
 
     if (!isEdit) hideEditor();
