@@ -129,7 +129,8 @@ const observerHandler = behindDebounce(function () {
   const mdContent = qlEditor.innerText;
   try {
     console.log("mstodo:parsing....");
-    let result = md.render(mdContent);
+    //fix:首次渲染有些空格为不间断空格，导致渲染失败 将所有不间断空格 (\u00A0) 替换为普通空格 (\u0020)
+    let result = md.render(mdContent.replace(/\u00A0/g, ' '));
     mdViewer.innerHTML = result;
 
     if (!isEdit) hideEditor();
@@ -145,16 +146,6 @@ function disconnect() {
 // 观察器， 当相关元素变化可能触发markdown变化的时候需要重新解析
 function observe() {
   disconnect();
-  // observer.observe(document.querySelector(".rightColumn")!, {
-  //   subtree: false,
-  //   childList: false,
-  //   attributes: true,
-  // });
-  // observer.observe(document.querySelector(".details")!, {
-  //   subtree: false,
-  //   childList: false,
-  //   attributes: true,
-  // });
   // 内容变化
   observer.observe(document.querySelector(".ql-editor")!, {
     characterData: true, // 观察目标节点内文本内容的变化
