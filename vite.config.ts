@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import monkey, { cdn }  from 'vite-plugin-monkey';
-
+import * as pack from "./package.json"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -14,7 +14,7 @@ export default defineConfig({
         icon: 'https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://to-do.live.com/&size=64',
         match: ['https://to-do.live.com/*'],
         license: 'MIT',
-        version: '0.0.0',
+        version: pack.version,
       },
       build: {
         externalGlobals: {
