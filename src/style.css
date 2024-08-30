@@ -145,6 +145,7 @@ pre {
     font-weight: 500;
     font-style: italic;
     color: inherit;
+    border-left: solid #444;
     border-left-width: 0.25rem;
     quotes: "“" "”" "‘" "’";
     margin-top: 1.6em;

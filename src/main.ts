@@ -8,7 +8,7 @@ import "./style.css";
 import { createBtnWithIcon } from "./utils";
 const md = markdownit({
   // Enable HTML tags in source
-  html: false,
+  html: true,
   // Use '/' to close single tags (<br />)
   xhtmlOut: false,
   // Convert '\n' in paragraphs into <br>
