@@ -171,6 +171,7 @@ function clickListen() {
     if (target.className === "taskItem-titleWrapper" || parent?.contains(target)) {
       console.log("mstodo: click listener triggered")
       observerHandler();
+      observe()
     }
   });
 }
