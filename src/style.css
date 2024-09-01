@@ -137,7 +137,7 @@ pre {
 .markdown-body ol > li,
 .markdown-body ul > li {
   position: relative;
-  padding-left: 1.75em;
+  padding-left: 1.25em;
 }
 
 .markdown-body ol > li:before {
@@ -359,14 +359,15 @@ pre {
 
 .markdown-body ol,
 .markdown-body ul {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-left: 1em;
   list-style-type: none;
 }
 
 .markdown-body li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  /* margin-top: 0.5em;
+  margin-bottom: 0.5em; */
 }
 
 .markdown-body pre {
