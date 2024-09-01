@@ -6,6 +6,7 @@ import "highlight.js/styles/tokyo-night-dark.min.css";
 import "./style.css";
 // import 'github-markdown-css/github-markdown-dark.css'
 import { createBtnWithIcon } from "./utils";
+import { listenPasteImg } from "./PasteAndUploadImg";
 const md = markdownit({
   // Enable HTML tags in source
   html: true,
@@ -40,6 +41,8 @@ waitForElement(".ql-editor").then(() => {
   observe();
   // click task item listener
   clickListen();
+  // listen img paste 
+  listenPasteImg()
 });
 let isEdit = false;
 function hideEditor() {
